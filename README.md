@@ -5,11 +5,11 @@ Development and evaluation of an algorithm to link mothers and infants in two US
 
 -   Analytics use case(s): **Characterization**
 -   Study type: **Methods Research**
--   Tags: **OHDSI2022**
+-   Tags: **Maternal and infant health**
 -   Study lead: **James Weaver**
 -   Study lead forums tag: [**jweave17**](https://forums.ohdsi.org/u/jweave17/)
--   Study start date: **1 Jan 2022**
--   Study end date: **1 Nov 2022**
+-   Study start date: **2022-01-01**
+-   Study end date: **2022-11-01**
 -   Results explorer: [**MotherInfantLinkEval**](https://data.ohdsi.org/MotherInfantLinkEval/)
 
 **Title:** Development and evaluation of an algorithm to link mothers and infants in two US commercial healthcare claims databases
