@@ -1,0 +1,10 @@
+cohortDefinitionId,cohortLabel,cohortName
+1,linkedMothersPregStart,Linked mothers (pregnancy episode start)
+2,linkedMothersPregEnd,Linked mothers (pregnancy episode end)
+3,linkedInfants,Linked infants
+4,allMothersPregStart,All mothers (pregnancy episode start)
+5,allMothersPregEnd,All mothers (pregnancy episode end)
+6,allInfants,All infants
+7,notLinkedMothersPregStart,Not linked mothers (pregnancy episode start)
+8,notLinkedMothersPregEnd,Not linked mothers (pregnancy episode end)
+9,notLinkedInfants,Not linked infants

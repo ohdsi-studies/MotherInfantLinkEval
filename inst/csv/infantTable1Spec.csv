@@ -1,0 +1,10 @@
+label,analysisId,covariateIds
+Sex,1,"8532001,8507001,999999'"
+Index year,6,
+Index month,7,
+Post observation time (days),9,
+Distinct conditons,905,
+Distinct drug ingredients,908,
+Procedures,911,
+Distinct measurements,914,
+Distinct visit types,923,"9202923,9201923,9203923,999999'"

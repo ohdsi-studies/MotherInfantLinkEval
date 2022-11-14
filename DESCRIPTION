@@ -1,0 +1,13 @@
+Package: motherinfantevaluation
+Type: Package
+Title: Development and evaluation of an algorithm to link mothers and infants in two US commercial healthcare claims databases
+Version: 0.0.1
+Author: James Weaver, Jill Hardin, Clair Blacketer, Melanie Jacobson, Alexis Krumme, Patrick Ryan
+Maintainer: James Weaver <jweave17@its.jnj.com>
+Description: This research developed and evaluated an algorithm to link mothers and infants 
+    in two US administrative databases to facilitate research on prenatal medication exposure
+	and infant health outcomes.
+License: Apache License 2.0
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.1
