@@ -385,7 +385,21 @@ and subject_id not in (
   from @cohort_database_schema.@cohort_table
   where cohort_definition_id = 3
 )
-;
+union all
+  select
+    distinct
+    10 as cohort_definition_id, --linked infants, same start/end date
+    imi.infant_person_id as subject_id,
+    min(observation_period_start_date) as cohort_start_date,
+    min(observation_period_end_date) as cohort_end_date
+  from #inferred_mother_infants imi
+  inner join @cdm_database_schema.observation_period op
+  on imi.infant_person_id = op.person_id
+  {@first_outcome_only} ? {
+    where imi.multi = 1
+  }
+  group by 1,2
+  ;
 
 
 
