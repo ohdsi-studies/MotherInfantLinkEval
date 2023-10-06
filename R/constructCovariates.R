@@ -8,7 +8,7 @@ constructCovariates <- function(connectionDetails,
 
   covariateFolder <- file.path(outputFolder, "covariateData")
   if (!file.exists(covariateFolder)) {
-    dir.create(covariateFolder)
+    dir.create(covariateFolder, recursive = TRUE)
   }
 
   cohortRefFile <- system.file("csv", "cohortRef.csv", package = "motherinfantevaluation")
@@ -482,4 +482,56 @@ constructCovariates <- function(connectionDetails,
     notLinkedInfantCovariateData <- FeatureExtraction::loadCovariateData(fileName)
   }
   Andromeda::close(notLinkedInfantCovariateData)
+
+
+  # linked infants: id10========================================================
+
+  fileName <- file.path(covariateFolder, paste0(cohortRef$cohortLabel[cohortRef$cohortDefinitionId == 10], "CovariateData"))
+  if (!file.exists(fileName)) {
+    writeLines("constructing linked infants covariate data...")
+
+    linkedInfantObsStartCovariateSettings <- FeatureExtraction::createCovariateSettings(
+      useDemographicsGender = TRUE,
+      useDemographicsAge = FALSE,
+      useDemographicsIndexYear = TRUE,
+      useDemographicsIndexMonth = TRUE,
+      useDemographicsPriorObservationTime = FALSE,
+      useDemographicsPostObservationTime = TRUE,
+      useDemographicsTimeInCohort = TRUE, # cohort end as obs end
+      useConditionOccurrenceLongTerm = TRUE,
+      useConditionGroupEraLongTerm = TRUE,
+      useDrugExposureLongTerm = TRUE,
+      useDrugGroupEraLongTerm = TRUE,
+      useProcedureOccurrenceLongTerm = TRUE,
+      useMeasurementLongTerm = TRUE,
+      useCharlsonIndex = FALSE,
+      useDistinctConditionCountLongTerm = TRUE,
+      useDistinctIngredientCountLongTerm = TRUE,
+      useDistinctProcedureCountLongTerm = TRUE,
+      useDistinctMeasurementCountLongTerm = TRUE,
+      useDistinctObservationCountLongTerm = TRUE,
+      useVisitCountLongTerm = TRUE,
+      useVisitConceptCountLongTerm = TRUE,
+      longTermStartDays = 0,
+      endDays = 365,
+      includedCovariateConceptIds = c(),
+      addDescendantsToInclude = TRUE,
+      excludedCovariateConceptIds = c(),
+      addDescendantsToExclude = FALSE,
+      includedCovariateIds = c())
+
+    linkedInfantObsStartCovariateData <- FeatureExtraction::getDbCovariateData(
+      connectionDetails = connectionDetails,
+      cdmDatabaseSchema = cdmDatabaseSchema,
+      cohortDatabaseSchema = cohortDatabaseSchema,
+      cohortTable = cohortTable,
+      cohortId = 10,
+      covariateSettings = linkedInfantObsStartCovariateSettings,
+      aggregated = TRUE)
+    FeatureExtraction::saveCovariateData(covariateData = linkedInfantObsStartCovariateData, file = fileName)
+  } else {
+    linkedInfantObsStartCovariateData <- FeatureExtraction::loadCovariateData(fileName)
+  }
+  Andromeda::close(linkedInfantCovariateData)
+
 }

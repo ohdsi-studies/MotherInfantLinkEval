@@ -8,7 +8,7 @@ exportData <- function(studyFolder,
     dir.create(shinyDataFolder)
   }
 
-  covariate data =============================================================
+  # covariate data =============================================================
   covariateFolderDummy <- file.path(studyFolder, databaseIds[1], analysisIds[1], "covariateData")
   rawfileNames <- list.files(covariateFolderDummy, pattern = ".*\\.rds")
 

@@ -23,7 +23,8 @@ createCovariateOutput <- function(outputFolder) {
 
   linkedMothersPregStartCovariateData <- loadCovariates(paste0(cohortRef$cohortLabel[cohortRef$cohortDefinitionId == 1], "CovariateData"))
   linkedMothersPregEndCovariateData <- loadCovariates(paste0(cohortRef$cohortLabel[cohortRef$cohortDefinitionId == 2], "CovariateData"))
-  linkedInfantsCovariateData <- loadCovariates(paste0(cohortRef$cohortLabel[cohortRef$cohortDefinitionId == 3], "CovariateData"))
+  # linkedInfantsCovariateData <- loadCovariates(paste0(cohortRef$cohortLabel[cohortRef$cohortDefinitionId == 3], "CovariateData")) # problematic index date as linked mother preg end date
+  linkedInfantsCovariateData <- loadCovariates(paste0(cohortRef$cohortLabel[cohortRef$cohortDefinitionId == 10], "CovariateData")) # corrected index date as infant obs period start
   allMothersPregStartCovariateData <- loadCovariates(paste0(cohortRef$cohortLabel[cohortRef$cohortDefinitionId == 4], "CovariateData"))
   allMothersPregEndCovariateData <- loadCovariates(paste0(cohortRef$cohortLabel[cohortRef$cohortDefinitionId == 5], "CovariateData"))
   allInfantsCovariateData <- loadCovariates(paste0(cohortRef$cohortLabel[cohortRef$cohortDefinitionId == 6], "CovariateData"))

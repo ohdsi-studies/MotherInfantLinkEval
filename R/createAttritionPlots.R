@@ -12,7 +12,7 @@ createAttritionPlots <- function(studyFolder,
   analysisVariants <- c("All pregnancies - 60d", "First pregnancies - 60d", "All pregnanices - 90d")
   databaseIds <- c("truven_ccae", "optum_extended_dod")
 
-  for (analysisVariant in analysisVariants) { # analysisVariant <- analysisVariants[3]
+  for (analysisVariant in analysisVariants) { # analysisVariant <- analysisVariants[1]
 
     if (analysisVariant == "All pregnancies - 60d") {
       analysisId <- "primary"
@@ -25,7 +25,7 @@ createAttritionPlots <- function(studyFolder,
     }
 
     attritionPlots <- list()
-    for (databaseId in databaseIds) { # databaseId <- databaseIds[1]
+    for (databaseId in databaseIds) { # databaseId <- databaseIds[2]
 
       attrition <- read.csv(file.path(studyFolder, databaseId, analysisId, "attritionCounts.csv"))
       attrition$pairDrops <- NA

@@ -94,7 +94,7 @@ characterizeCohorts <- function(outputFolder,
 
    # infant tables =============================================================
 
-  linkedInfantsCovariateData <- loadCovariates("linkedInfantsCovariateData")
+  linkedInfantsCovariateData <- loadCovariates("linkedInfantsObsStartCovariateData")
   notLinkedInfantsCovariateData <- loadCovariates("notLinkedInfantsCovariateData")
   allInfantsCovariateData <- loadCovariates("allInfantsCovariateData")
 
@@ -108,7 +108,3 @@ characterizeCohorts <- function(outputFolder,
             covariateSpec = infantCovarSpec,
             fileName = "infantlinkedAllTable1.csv")
 }
-
-
-
-
