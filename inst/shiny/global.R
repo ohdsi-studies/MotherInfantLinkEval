@@ -1,6 +1,6 @@
 source("plotsTables.R")
 source("dataPulls.R")
-dataFolder <- "G:/motherinfantevaluation/shinyData"
+dataFolder <- "G:/motherinfantevaluation2/shinyData"
 load(file.path(dataFolder, "PreMergedShinyData.RData"))
 
 databaseRef <- c("truven_ccae", "optum_extended_dod")

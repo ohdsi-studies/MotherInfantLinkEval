@@ -223,7 +223,7 @@ createAttritionPlots <- function(studyFolder,
     # save analysis, 2-db plot here
 
     col1 <- grid::textGrob("CCAE", gp = grid::gpar(fontsize = 14))
-    col2 <- grid::textGrob("Optum", gp = grid::gpar(fontsize = 14))
+    col2 <- grid::textGrob("Clinformatics®", gp = grid::gpar(fontsize = 14))
 
     plotGrob <- gridExtra::arrangeGrob(col1, col2,
                                        attritionPlots[[1]], attritionPlots[[2]],

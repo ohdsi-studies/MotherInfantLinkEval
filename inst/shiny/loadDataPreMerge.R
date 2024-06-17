@@ -1,4 +1,5 @@
-dataFolder <- "G:/motherinfantevaluation/shinyData"
+dataFolder <- "G:/motherinfantevaluation2/shinyData"
+#dataFolder <- "G:/motherinfantevaluation/shinyData"
 
 covarRef <- readRDS(file.path(dataFolder, "covariateRef.rds"))
 covarRef <- covarRef[!duplicated(covarRef), ]

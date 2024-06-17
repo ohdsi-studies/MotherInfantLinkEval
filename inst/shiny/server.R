@@ -20,7 +20,7 @@ colNames <- c("Domain",
 shinyServer(
   function(input, output) {
 
-    roundDf <- function(df, digits = 3) {
+    roundDf <- function(df, digits = 5) {
       nums <- vapply(df, is.numeric, FUN.VALUE = logical(1))
       df[, nums] <- round(df[, nums], digits = digits)
       return(df)

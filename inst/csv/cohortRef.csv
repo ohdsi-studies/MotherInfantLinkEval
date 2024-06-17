@@ -8,3 +8,4 @@ cohortDefinitionId,cohortLabel,cohortName
 7,notLinkedMothersPregStart,Not linked mothers (pregnancy episode start)
 8,notLinkedMothersPregEnd,Not linked mothers (pregnancy episode end)
 9,notLinkedInfants,Not linked infants
+10,linkedInfantsObsStart,Linked infants (obs period start)

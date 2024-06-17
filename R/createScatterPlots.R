@@ -14,7 +14,7 @@ createScatterPlots <- function(studyFolder) {
   for (analysisVariant in analysisVariants) { # analysisVariant <- analysisVariants[1]
 
     scatterPlots <- list()
-    for (databaseId in databaseIds) { # databaseId <- databaseIds[1]
+    for (databaseId in databaseIds) { # databaseId <- databaseIds[2]
 
       # pregnancy start
       pregStartData <- motherPregStart[motherPregStart$analysisVariant == analysisVariant &
@@ -70,7 +70,7 @@ createScatterPlots <- function(studyFolder) {
     row3 <- grid::textGrob("Infants", rot = 90, gp = grid::gpar(fontsize = 14))
     col0 <- grid::textGrob("")
     col1 <- grid::textGrob("CCAE", gp = grid::gpar(fontsize = 14))
-    col2 <- grid::textGrob("Optum", gp = grid::gpar(fontsize = 14))
+    col2 <- grid::textGrob("Clinformatics®", gp = grid::gpar(fontsize = 14))
 
     plotGrob <- gridExtra::arrangeGrob(col0, col1, col2,
                                        row1, scatterPlots[[1]], scatterPlots[[4]],
